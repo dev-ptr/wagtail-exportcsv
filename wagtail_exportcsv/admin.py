@@ -1,4 +1,10 @@
-from wagtail.core import hooks
+
+from wagtail import __version__ as WAGTAIL_VERSION
+if WAGTAIL_VERSION < 3.0:
+    from wagtail.core import hooks
+else:
+    from wagtail import hooks
+
 from django.utils.html import format_html
 from wagtail.contrib.modeladmin.options import (ModelAdmin,
                                                 modeladmin_register)

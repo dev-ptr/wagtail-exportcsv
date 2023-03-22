@@ -1,6 +1,6 @@
 
 from wagtail import __version__ as WAGTAIL_VERSION
-if WAGTAIL_VERSION < 3.0:
+if WAGTAIL_VERSION < (3, 0):
     from wagtail.core import hooks
 else:
     from wagtail import hooks
